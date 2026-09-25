@@ -1,0 +1,1 @@
+const p='eduguide_';export const get=(k,d=null)=>{try{const x=localStorage.getItem(p+k);return x===null?d:JSON.parse(x)}catch{return d}};export const set=(k,v)=>localStorage.setItem(p+k,JSON.stringify(v));export const del=k=>localStorage.removeItem(p+k);export const clear=()=>Object.keys(localStorage).filter(k=>k.startsWith(p)).forEach(k=>localStorage.removeItem(k));
